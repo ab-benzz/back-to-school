@@ -71,7 +71,67 @@
     `).join('');
         </script>
 
+        <div class="side-product-info">
+            <h2>Tech for <span>Learning</span></h2>
+            <p>See our laptop essentials for gamers, creatives, and productivity!</p>
+            <button>
+                See more
 
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path d="M4.35182 11.8887L9.64819 6.99971L4.35182 2.11075" stroke="#185BAA" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+
+            </button>
+            <img src="side_product.png" alt="" class="side-product-blob">
+        </div>
+
+        <style>
+            .side-product-info {
+                display: flex;
+                flex-direction: column;
+                gap: clamp(16px, 3vw, 24px);
+                max-width: 370px;
+                position: relative;
+            }
+
+            .side-product-blob {
+                position: absolute;
+                top: -100%;
+                right: -20%;
+            }
+
+
+            .side-product-info>h2 {
+                color: var(--PrimaryColor-Blue70, #185BAA);
+                font-size: clamp(15.654px, 3vw, 28px);
+
+            }
+
+            .side-product-info>h2>span {
+                color: var(--SecondaryColor-Blue60, #019BF0);
+
+            }
+
+            .side-product-info p {
+                line-height: 114%;
+                font-size: clamp(11px, 2.2vw, 20px);
+            }
+
+
+
+            .side-product-info>button {
+                display: flex;
+                align-items: center;
+                border: none;
+                background-color: transparent;
+                color: var(--PrimaryColor-Blue70, #185BAA);
+                gap: 4px;
+                font-weight: 500;
+                font-size: 11px, 2vw, 13px;
+
+            }
+        </style>
     </main>
 </body>
 
