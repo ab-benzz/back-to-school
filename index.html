@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <link rel="icon" type="image/x-icon" href="https://tinyurl.com/yt7f6mkc">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <main>
+        <section id="back-to-school-hero">
+            <h1>It's time to go <br><span>back</span> to school!</h1>
+            <div class="hero-img-container">
+                <div class="hero-floater"></div>
+                <div>
+                    <img src="images/hero_img1.png" alt="">
+                    <img src="images/hero_img2.png" alt="">
+                    <img src="images/hero_img3.png" alt="">
+                </div>
+                <div>
+                    <img src="images/hero_img4.png" alt="">
+                    <img src="images/hero_img5.png" alt="">
+                </div>
+
+            </div>
+            <p>Get ready to go back with these school essentials.</p>
+        </section>
+
+
+
+        <!-- SVG Template as a string (can also go in a <script type="text/template"> if preferred) -->
+        <template id="why-shop-icon">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="-0.785156" y="10.124" width="18.4144" height="13.1531" rx="2.64432"
+                    transform="rotate(-22.0898 -0.785156 10.124)" fill="#019BF0" />
+                <rect width="10.1253" height="2" rx="1"
+                    transform="matrix(-0.927977 0.372637 0.372637 0.927977 13.9629 13.2651)" fill="#D2EDFF" />
+                <rect x="10.416" y="11.7256" width="16.5103" height="11.2216" rx="1.64432" fill="#D2EDFF"
+                    stroke="#185BAA" stroke-width="2" stroke-linejoin="round" />
+                <rect x="11.4209" y="14" width="14.5013" height="2.64432" fill="#019BF0" />
+                <rect width="5.28864" height="2" rx="1" transform="matrix(-1 0 0 1 17.3486 18.0923)" fill="#019BF0" />
+                <rect x="2.79102" y="12.6597" width="2.87793" height="2.87793" rx="1"
+                    transform="rotate(-22.301 2.79102 12.6597)" fill="#D2EDFF" />
+            </svg>
+        </template>
+        <section id="why-shop-section"> </section>
+
+        <script>
+            const features = [
+                "Why shop <br> with Abenson",
+                "Up to 24 months <br> installment",
+                "Same-day delivery <br> within Metro Manila",
+                "100% authentic & <br> original brands",
+                "Find the best gadgets <br> with personal shoppers"
+            ];
+
+            const container = document.getElementById("why-shop-section");
+            const svgHTML = document.getElementById("why-shop-icon").innerHTML;
+
+            container.innerHTML = features.map(text => `
+        <div>
+            ${svgHTML}
+            <p>${text}</p>
+        </div>
+    `).join('');
+        </script>
+
+
+    </main>
+</body>
+
+</html>
+
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        align-items: center;
+        font-family: "Poppins", serif;
+        color: #4c525c;
+    }
+
+    body,
+    main {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        max-width: 1400px;
+
+    }
+
+    h1 {
+        color: #006de2;
+        font-weight: 600;
+        font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+        line-height: clamp(1.8rem, 4vw, 2.2rem);
+    }
+
+
+
+    #hero {
+        width: 100%;
+        position: relative;
+        background-color: #ecf5ff;
+        padding: clamp(3rem, 5vw, 5rem) clamp(1rem, 5vw, 5rem);
+        max-width: 1400px;
+        border-bottom-left-radius: 1.25rem;
+        border-bottom-right-radius: 1.25rem;
+    }
+
+
+    a {
+        text-decoration: none;
+    }
+
+
+    @media only screen and (width > 768px) {}
+
+    @media only screen and (width > 968px) {}
+
+    @media screen and (width > 1400px) {
+        body {
+            background-color: unset;
+        }
+
+        #hero {
+            margin-top: 2rem;
+            border-radius: 1.25rem;
+        }
+    }
+</style>
