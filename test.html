@@ -7,12 +7,267 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div>
-        <h2>Tech for Learning</h2>
-        <p>See our laptop essentials for gamers, creatives, and productivity!</p>
-        <button>See more</button>
-    </div>
+<body style="background-color: red;">
+    <style>
+        .hr {
+            margin: 1rem 0;
+            height: 1px;
+            background-color: #1FACFE;
+            border: none;
+            margin-left: -25px;
+            margin-right: -25px;
+        }
+
+        .details {
+            padding: 0 1rem;
+            width: auto;
+            display: flex;
+            border-radius: 5px;
+            cursor: cell;
+            flex-direction: column;
+        }
+
+        .details>.summary {
+            font-size: 1.25rem;
+            display: flex;
+            padding: 0.5rem;
+            list-style: none;
+            justify-content: flex-start;
+        }
+
+        .details>.summary::before {
+            content: url(https://dev4.abenson-shop.online/media/wysiwyg/pages/AbensonAppAboutUsPage_Plus4new.png);
+            width: 15px;
+            height: 15px;
+            padding: 13px;
+        }
+
+        .details[open]>.summary::before {
+            content: url(https://dev4.abenson-shop.online/media/wysiwyg/pages/AbensonAppAboutUsPage_Minus4new.png);
+            width: 15px;
+            height: 15px;
+        }
+
+        .button-shop-now {
+            background-color: #185BAA;
+            width: 250px;
+            height: 50px;
+            border-radius: 35px;
+            border: none;
+            color: white;
+            font-size: 15px;
+        }
+
+        .center-object {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .terms-conditions {
+            font-weight: bold;
+        }
+
+        .summary-container2 {
+            display: block;
+        }
+
+        .details-content-list {
+            list-style-type: none !important;
+            padding-left: 3rem !important;
+        }
+
+        .details-content-list li {
+            color: #767676;
+            padding-left: 12px;
+            font-size: 14px;
+        }
+
+        @supports (-webkit-touch-callout: default) {
+            .details>.summary::-webkit-details-marker {
+                display: none;
+            }
+        }
+
+        @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+            .details {
+                width: 350px;
+            }
+        }
+
+        /* 2688x1242px at 458ppi */
+        @media only screen and (device-width : 414px) and (device-height : 896px) and (-webkit-device-pixel-ratio : 3) {
+            .details>.summary::after {
+                margin-top: -10px;
+                margin-left: 100px;
+            }
+        }
+    </style>
+
+    <!--1st Dropdown -->
+    <details class="details">
+        <summary class="summary">
+            <div class="where-to-avail" style="color: #0298D5; font-size: 16px; padding: 10px;">I am a Plus! Rewards
+                Member, how do I link my account?</div>
+        </summary>
+        <div class="details-content-main">
+            <ul class="details-content-list">
+                <li>To link your Plus! Rewards Membership to Abenson Rewards, you may follow these steps:</li><br>
+
+                <li><span style="color: #4C525C; font-weight: bold;">STEP 1 : </span><br>
+                    Download the Abenson App</li>
+                <br>
+                <li><span style="color: #4C525C; font-weight: bold;">STEP 2 : </span><br>
+                    <span style="text-decoration: underline;">Physical PLUS! Card Members:</span><br>
+                    Link 16-digit card number<br>
+                    <br>
+                    <span style="text-decoration: underline;">Digital Members:</span><br>
+                    LOG IN<br>
+                    Log in using Registered Mobile Number<br>
+                </li>
+                <br>
+                <li><span style="color: #4C525C; font-weight: bold;">STEP 3 : </span><br>
+                    Enjoy Abenson Rewards!<br>
+                </li>
+            </ul>
+        </div>
+    </details>
+    <!--1st Dropdown -->
+
+    <br>
+
+    <!--2nd Dropdown -->
+    <details class="details">
+        <summary class="summary">
+            <div class="where-to-avail" style="color: #0298D5;font-size: 16px; padding: 10px;">I forgot my Plus! Card
+                Number, how will I Link my account?</div>
+        </summary>
+        <div class="details-content-main">
+            <ul class="details-content-list">
+                <li>Contact our Customer Care Team and send the following details:<br><br>
+                    <ul>
+                        <li>Registered name (Plus! Rewards account)</li>
+                        <li>Birthday</li>
+                        <li>Contact number</li>
+                        <li>Estimated last purchase date</li>
+                    </ul>
+            </ul>
+        </div>
+    </details>
+    <!--2nd Dropdown -->
+
+    <br>
+
+    <!--3rd Dropdown -->
+    <details class="details">
+        <summary class="summary">
+            <div class="where-to-avail" style="color: #0298D5;font-size: 16px; padding: 10px;">I have a recent purchase,
+                when will my ecash reflect in my eWallet?</div>
+        </summary>
+        <div class="details-content-main">
+            <ul class="details-content-list">
+                <li><span style="color: #4C525C; font-weight: bold;">Pick up Transaction: </span>3-5 Days from date of
+                    purchase</li>
+                <li><span style="color: #4C525C; font-weight: bold;">Delivery Transaction: </span>3-5 Days from date of
+                    delivery</li>
+            </ul>
+        </div>
+    </details>
+    <!--3rd Dropdown -->
+
+    <br>
+
+    <!--4th Dropdown -->
+    <details class="details">
+        <summary class="summary">
+            <div class="where-to-avail" style="color: #0298D5;font-size: 16px; padding: 10px;">My purchase is below 400
+                pesos. Will I still earn eCash?</div>
+        </summary>
+        <div class="details-content-main">
+            <ul class="details-content-list">
+                <li>Yes. Earning eCash with Abenson Rewards has no minimum purchase requirement.
+                    Purchases below 400 pesos will earn a portion of an eCash, <br>
+                    <span style="color: #4C525C; font-weight: bold;">For example 300 = 0.75 eCash.</span>
+                </li>
+            </ul>
+        </div>
+    </details>
+    <!--4th Dropdown -->
+
+    <br>
+
+    <!--5th Dropdown -->
+    <details class="details">
+        <summary class="summary">
+            <div class="where-to-avail" style="color: #0298D5;  font-size: 16px; padding: 10px;">Is there a minimum
+                amount for eCash redemption?</div>
+        </summary>
+        <div class="details-content-main">
+            <ul class="details-content-list">
+                <li>1 eCash is the minimum amount required for redemption.</li>
+            </ul>
+        </div>
+    </details>
+    <!--5th Dropdown -->
+
+    <br>
+
+    <!--6th Dropdown -->
+    <details class="details">
+        <summary class="summary">
+            <div class="where-to-avail" style="color: #0298D5; font-size: 16px; padding: 10px;">Does my Abenson Rewards
+                account expire?</div>
+        </summary>
+        <div class="details-content-main">
+            <ul class="details-content-list">
+                <li>Your Account/Membership validity with Abenson Rewards will be based on the following:</li><br>
+                <li><span style="color: #4C525C; font-weight: bold;">3 years straight without single
+                        transaction</span><br><br>
+
+                    <ul>
+                        <li>Member <span style="text-decoration: underline;">can still earn eCash</span> but <span
+                                style="text-decoration: underline;">cannot redeem</span>.</li>
+                        <li>Account will be *Deactivated.</li><br>
+                    </ul>
+
+                    <span style="color: #4C525C; font-weight: bold;">5 years straight without transaction</span><br><br>
+                <li>
+                    <ul>
+                        <li>Account will be tagged as Deleted</li>
+                    </ul>
+                </li><br>
+                <li><span style="font-style: italic;">*Deactivated accounts may call our customer care hotline to be
+                        assisted.</span></li>
+            </ul>
+        </div>
+    </details>
+    <!--6th Dropdown -->
+
+    <br>
+
+    <!--7th Dropdown -->
+    <details class="details">
+        <summary class="summary">
+            <div class="where-to-avail" style="color: #0298D5; font-size: 16px; padding: 10px;">Does my Abenson Rewards
+                eCash expire?</div>
+        </summary>
+        <div class="details-content-main">
+            <ul class="details-content-list">
+                <li>Abenson Rewards eCash will expire 5 years from the month it was earned regardless of the status of
+                    your account.</li><br>
+
+                <li><span style=" color: #4C525C; font-weight: bold;">For example:</span><br>
+                    For the month of May 2021, you earned 50 eCash.<br>
+                    <span style="font-style: italic;">50 eCash will expire on June 1, 2026.</span>
+                </li>
+                <br>
+                <li>For the month of June 2021, you earned 40 eCash.<br>
+                    <span style="font-style: italic;">40 eCash will expire on July 1, 2026.</span>
+                </li>
+            </ul>
+        </div>
+    </details>
+    <!--7th Dropdown -->
 </body>
 
 </html>
